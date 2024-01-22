@@ -373,3 +373,110 @@
 [38;5;220m[  script:es_extended] [INFO] Player "MoinMoin" has connected to the server. ID: 1
 [38;5;220m[  script:es_extended] [INFO] Saved player "Dreggish Youtube"
 [ citizen-server-main] -> Quitting: SIGHUP received
+
+================================================================
+======== FXServer Starting - 22.1.2024, 11:48:54                
+================================================================
+[           resources] Scanning resources.
+[           resources] Found 40 resources.
+[          svadhesive] Authenticating server license key...
+[38;5;66m[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[38;5;83m[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v7.0.0 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for yarn
+[38;5;83m[           resources] Started resource yarn
+[38;5;161m[    c-scripting-core] Creating script environments for webpack
+[           resources] Started resource webpack
+[ citizen-server-impl] Running build tasks on resource chat - it'll restart once completed.
+[      script:webpack] chat: started building webpack.config.js
+[38;5;73m[ citizen-server-impl] Couldn't start resource chat.
+[38;5;83m[           resources] Started resource chat-theme-gtao
+[38;5;83m[           resources] Started resource example-loadscreen
+[38;5;83m[           resources] Started resource fivem
+[38;5;83m[           resources] Started resource fivem-map-hipster
+[           resources] Started resource fivem-map-skater
+[    c-scripting-core] Creating script environments for hardcap
+[38;5;83m[           resources] Started resource hardcap
+[    c-scripting-core] Creating script environments for mapmanager
+[           resources] Started resource mapmanager
+[38;5;161m[    c-scripting-core] Creating script environments for money
+[           resources] Started resource money
+[38;5;161m[    c-scripting-core] Creating script environments for money-fountain
+[           resources] Started resource money-fountain
+[38;5;83m[           resources] Started resource money-fountain-example-map
+[38;5;161m[    c-scripting-core] Creating script environments for oxmysql
+[           resources] Started resource oxmysql
+[    c-scripting-core] Creating script environments for ped-money-drops
+[           resources] Started resource ped-money-drops
+[    c-scripting-core] Creating script environments for player-data
+[           resources] Started resource player-data
+[    c-scripting-core] Creating script environments for playernames
+[           resources] Started resource playernames
+[    c-scripting-core] Creating script environments for rconlog
+[           resources] Started resource rconlog
+[           resources] Warning: Resource redm-map-one does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource redm-map-one.
+[    c-scripting-core] Creating script environments for runcode
+[           resources] Started resource runcode
+[           resources] Warning: Resource sessionmanager-rdr3 does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource sessionmanager-rdr3.
+[           resources] Started resource spawnmanager
+[    c-scripting-core] Creating script environments for async
+[           resources] Started resource async
+[    c-scripting-core] Creating script environments for cron
+[           resources] Started resource cron
+[    c-scripting-core] Creating script environments for es_extended
+[           resources] Started resource es_extended
+[    c-scripting-core] Creating script environments for esx_context
+[           resources] Started resource esx_context
+[    c-scripting-core] Creating script environments for esx_identity
+[           resources] Started resource esx_identity
+[    c-scripting-core] Creating script environments for esx_loadingscreen
+[           resources] Started resource esx_loadingscreen
+[           resources] Started resource esx_menu_default
+[           resources] Started resource esx_menu_dialog
+[           resources] Started resource esx_menu_list
+[    c-scripting-core] [0mCreating script environments for esx_notify
+[resources:esx_notify] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:14)
+[           resources] Started resource esx_notify (1 warning)
+[    c-scripting-core] Creating script environments for esx_progressbar
+[resources:esx_progre] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource esx_progressbar (1 warning)
+[           resources] Started resource skinchanger
+[    c-scripting-core] Creating script environments for esx_skin
+[38;5;83m[           resources] Started resource esx_skin
+[    c-scripting-core] Creating script environments for esx_textui
+[           resources] Started resource esx_textui
+[      script:oxmysql] [10.4.32-MariaDB] Database server connection established!
+[  script:es_extended] [INFO] ESX Legacy initialized
+[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://siralexs-doygr5.users.cfx.re/
+[38;5;21m[      script:webpack] chat: built webpack.config.js
+[38;5;73m[ citizen-server-impl] Build tasks completed - starting resource chat.
+[    c-scripting-core] Creating script environments for chat
+[           resources] Started resource chat
+[ citizen-server-impl] sync thread hitch warning: timer interval of 143 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 155 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 153 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 154 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 188 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 116 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 155 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 162 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 182 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 119 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 161 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 111 milliseconds
+[ citizen-server-main] -> Quitting: SIGHUP received

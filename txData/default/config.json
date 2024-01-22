@@ -32,9 +32,11 @@
     "embedConfigJson": "{\n  \"onlineString\": \"🟢 Online\",\n  \"onlineColor\": \"#0BA70B\",\n  \"partialString\": \"🟡 Partial\",\n  \"partialColor\": \"#FFF100\",\n  \"offlineString\": \"🔴 Offline\",\n  \"offlineColor\": \"#A70B28\",\n  \"buttons\": [\n    {\n      \"emoji\": \"1062338355909640233\",\n      \"label\": \"Connect\",\n      \"url\": \"{{serverJoinUrl}}\"\n    },\n    {\n      \"emoji\": \"1062339910654246964\",\n      \"label\": \"txAdmin Discord\",\n      \"url\": \"https://discord.gg/txAdmin\"\n    },\n    {\n      \"emoji\": \"😏\",\n      \"label\": \"ZAP-Hosting\",\n      \"url\": \"https://zap-hosting.com/txadmin6\"\n    }\n  ]\n}"
   },
   "fxRunner": {
-    "serverDataPath": "C:/Users/Administrator/Desktop/dreggish_tutorial/server-data/",
-    "cfgPath": "C:/Users/Administrator/Desktop/dreggish_tutorial/server.cfg",
+    "serverDataPath": "C:/Users/Administrator/Desktop/DREGGISH-TUTORIAL/server-data/",
+    "cfgPath": "C:/Users/Administrator/Desktop/DREGGISH-TUTORIAL/server.cfg",
+    "commandLine": "",
     "onesync": "legacy",
-    "autostart": true
+    "autostart": true,
+    "quiet": false
   }
 }
