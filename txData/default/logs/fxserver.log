@@ -1,0 +1,375 @@
+
+================================================================
+======== FXServer Starting - 22.1.2024, 01:05:18                
+================================================================
+[           resources] Scanning resources.
+[           resources] Found 40 resources.
+[          svadhesive] Authenticating server license key...
+[38;5;66m[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v7.0.0 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://siralexs-doygr5.users.cfx.re/
+[ citizen-server-impl] server thread hitch warning: timer interval of 221 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 112 milliseconds
+> txaEvent "serverShuttingDown" "{＂delay＂:5000,＂author＂:＂SirAlexS＂,＂message＂:＂Server restarting (requested by SirAlexS).＂}"
+[      script:monitor] [txAdmin] Server shutdown imminent. Kicking all players.
+
+================================================================
+======== FXServer Starting - 22.1.2024, 01:07:06                
+================================================================
+[           resources] Scanning resources.
+[           resources] Found 41 resources.
+[          svadhesive] Authenticating server license key...
+[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v7.0.0 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for yarn
+[           resources] Started resource yarn
+[ citizen-server-impl] Running build tasks on resource webpack - it'll restart once completed.
+[    c-resources-core] Could not start dependency webpack for resource chat.
+[ citizen-server-impl] Couldn't start resource chat.
+[           resources] Started resource chat-theme-gtao
+[           resources] Started resource example-loadscreen
+[           resources] Started resource fivem
+[           resources] Started resource fivem-map-hipster
+[38;5;83m[           resources] Started resource fivem-map-skater
+[38;5;161m[    c-scripting-core] Creating script environments for hardcap
+[38;5;83m[           resources] Started resource hardcap
+[38;5;161m[    c-scripting-core] Creating script environments for mapmanager
+[           resources] Started resource mapmanager
+[    c-scripting-core] Creating script environments for money
+[38;5;83m[           resources] Started resource money
+[38;5;161m[    c-scripting-core] Creating script environments for money-fountain
+[           resources] Started resource money-fountain
+[           resources] Started resource money-fountain-example-map
+[    c-scripting-core] Creating script environments for oxmysql
+[           resources] Started resource oxmysql
+[    c-scripting-core] Creating script environments for ped-money-drops
+[38;5;83m[           resources] Started resource ped-money-drops
+[    c-scripting-core] Creating script environments for player-data
+[38;5;83m[           resources] Started resource player-data
+[    c-scripting-core] Creating script environments for playernames
+[           resources] Started resource playernames
+[    c-scripting-core] Creating script environments for rconlog
+[           resources] Started resource rconlog
+[           resources] Warning: Resource redm-map-one does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource redm-map-one.
+[    c-scripting-core] Creating script environments for runcode
+[           resources] Started resource runcode
+[ citizen-server-impl] Running build tasks on resource sessionmanager-rdr3 - it'll restart once completed.
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[ citizen-server-impl] Couldn't start resource sessionmanager-rdr3.
+[38;5;83m[           resources] Started resource spawnmanager
+[ citizen-server-impl] Running build tasks on resource webpack - it'll restart once completed.
+[ citizen-server-impl] Couldn't start resource webpack.
+[    c-scripting-core] Creating script environments for async
+[           resources] Started resource async
+[    c-scripting-core] Creating script environments for cron
+[           resources] Started resource cron
+[    c-scripting-core] Creating script environments for es_extended
+[           resources] Started resource es_extended
+[    c-scripting-core] Creating script environments for esx_context
+[           resources] Started resource esx_context
+[38;5;161m[    c-scripting-core] Creating script environments for esx_identity
+[38;5;83m[           resources] Started resource esx_identity
+[    c-scripting-core] Creating script environments for esx_loadingscreen
+[           resources] Started resource esx_loadingscreen
+[38;5;83m[           resources] Started resource esx_menu_default
+[           resources] Started resource esx_menu_dialog
+[           resources] Started resource esx_menu_list
+[38;5;83m[           resources] Started resource skinchanger
+[    c-scripting-core] Creating script environments for esx_skin
+[           resources] Started resource esx_skin
+[    c-scripting-core] Creating script environments for esx_multicharacter
+[38;5;83m[           resources] Started resource esx_multicharacter
+[    c-scripting-core] Creating script environments for esx_notify
+[resources:esx_notify] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:14)
+[           resources] Started resource esx_notify (1 warning)
+[    c-scripting-core] Creating script environments for esx_progressbar
+[38;5;173m[resources:esx_progre] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource esx_progressbar (1 warning)
+[    c-scripting-core] Creating script environments for esx_textui
+[38;5;83m[           resources] Started resource esx_textui
+[         script:yarn] [yarn]	yarn install v1.22.5
+[         script:yarn] [1/4] Resolving packages...
+[         script:yarn] [2/4] Fetching packages...
+[         script:yarn] [yarn]	yarn install v1.22.5
+[         script:yarn] Error: [yarn]	warning Waiting for the other yarn instance to finish (pid undefined, inside undefined)
+[38;5;42m[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://siralexs-doygr5.users.cfx.re/
+[ citizen-server-impl] server thread hitch warning: timer interval of 207 milliseconds
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] [yarn]	info fsevents@2.3.1: The platform "win32" is incompatible with this module.
+[         script:yarn] [yarn]	info "fsevents@2.3.1" is an optional dependency and failed compatibility check. Excluding it from installation.
+[         script:yarn] [yarn]	info fsevents@1.2.13: The platform "win32" is incompatible with this module.
+[         script:yarn] info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[         script:yarn] [yarn]	[3/4] Linking dependencies...
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] yarn is currently busy: we are waiting to compile sessionmanager-rdr3
+[         script:yarn] [yarn]	[4/4] Building fresh packages...
+[         script:yarn] Error: [yarn]	warning Ignored scripts due to flag.
+[         script:yarn] [yarn]	Done in 22.69s.
+[38;5;73m[ citizen-server-impl] Build tasks completed - starting resource webpack.
+[38;5;161m[    c-scripting-core] Creating script environments for webpack
+[38;5;73m[ citizen-server-impl] Running build tasks on resource chat - it'll restart once completed.
+[           resources] Started resource webpack
+[ citizen-server-impl] server thread hitch warning: timer interval of 494 milliseconds
+[         script:yarn] [yarn]	[1/4] Resolving packages...
+[         script:yarn] [yarn]	success Already up-to-date.
+[         script:yarn] [yarn]	Done in 22.37s.
+[ citizen-server-impl] Build tasks completed - starting resource webpack.
+> txaReportResources
+[      script:monitor] [txAdmin] Sending resources list to txAdmin.
+[         script:yarn] [yarn]	yarn install v1.22.5
+[38;5;151m[         script:yarn] [yarn]	[1/4] Resolving packages...
+[         script:yarn] [yarn]	yarn install v1.22.5
+[         script:yarn] [yarn]	[2/4] Fetching packages...
+[38;5;151m[         script:yarn] Error: [yarn]	warning Waiting for the other yarn instance to finish (pid undefined, inside undefined)
+[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 114 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
+[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[         script:yarn] [yarn]	info fsevents@1.2.11: The platform "win32" is incompatible with this module.
+[         script:yarn] info "fsevents@1.2.11" is an optional dependency and failed compatibility check. Excluding it from installation.
+[38;5;151m[         script:yarn] [yarn]	[3/4] Linking dependencies...
+[         script:yarn] [yarn]	[4/4] Building fresh packages...
+[         script:yarn] Error: [yarn]	warning Ignored scripts due to flag.
+[         script:yarn] [yarn]	Done in 57.57s.
+> txaEvent "serverShuttingDown" "{＂delay＂:5000,＂author＂:＂SirAlexS＂,＂message＂:＂Server restarting (requested by SirAlexS).＂}"
+
+================================================================
+======== FXServer Starting - 22.1.2024, 01:08:43                
+================================================================
+[           resources] Scanning resources.
+[           resources] Found 41 resources.
+[          svadhesive] Authenticating server license key...
+[38;5;66m[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v7.0.0 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for yarn
+[           resources] Started resource yarn
+[    c-scripting-core] Creating script environments for webpack
+[           resources] Started resource webpack
+[ citizen-server-impl] Running build tasks on resource chat - it'll restart once completed.
+[      script:webpack] chat: started building webpack.config.js
+[ citizen-server-impl] Couldn't start resource chat.
+[38;5;83m[           resources] Started resource chat-theme-gtao
+[38;5;83m[           resources] Started resource example-loadscreen
+[           resources] Started resource fivem
+[           resources] Started resource fivem-map-hipster
+[38;5;83m[           resources] Started resource fivem-map-skater
+[38;5;161m[    c-scripting-core] Creating script environments for hardcap
+[38;5;83m[           resources] Started resource hardcap
+[38;5;161m[    c-scripting-core] Creating script environments for mapmanager
+[38;5;83m[           resources] Started resource mapmanager
+[    c-scripting-core] Creating script environments for money
+[38;5;83m[           resources] Started resource money
+[38;5;161m[    c-scripting-core] Creating script environments for money-fountain
+[           resources] Started resource money-fountain
+[           resources] Started resource money-fountain-example-map
+[    c-scripting-core] Creating script environments for oxmysql
+[38;5;83m[           resources] Started resource oxmysql
+[    c-scripting-core] Creating script environments for ped-money-drops
+[38;5;83m[           resources] Started resource ped-money-drops
+[38;5;161m[    c-scripting-core] Creating script environments for player-data
+[           resources] Started resource player-data
+[    c-scripting-core] Creating script environments for playernames
+[38;5;83m[           resources] Started resource playernames
+[    c-scripting-core] Creating script environments for rconlog
+[38;5;83m[           resources] Started resource rconlog
+[           resources] Warning: Resource redm-map-one does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource redm-map-one.
+[38;5;161m[    c-scripting-core] Creating script environments for runcode
+[           resources] Started resource runcode
+[38;5;73m[ citizen-server-impl] Running build tasks on resource sessionmanager-rdr3 - it'll restart once completed.
+[38;5;73m[ citizen-server-impl] Couldn't start resource sessionmanager-rdr3.
+[38;5;83m[           resources] Started resource spawnmanager
+[    c-scripting-core] Creating script environments for async
+[38;5;83m[           resources] Started resource async
+[    c-scripting-core] Creating script environments for cron
+[38;5;83m[           resources] Started resource cron
+[    c-scripting-core] Creating script environments for es_extended
+[           resources] Started resource es_extended
+[    c-scripting-core] Creating script environments for esx_context
+[           resources] Started resource esx_context
+[    c-scripting-core] Creating script environments for esx_identity
+[38;5;83m[           resources] Started resource esx_identity
+[    c-scripting-core] Creating script environments for esx_loadingscreen
+[           resources] Started resource esx_loadingscreen
+[           resources] Started resource esx_menu_default
+[           resources] Started resource esx_menu_dialog
+[           resources] Started resource esx_menu_list
+[           resources] Started resource skinchanger
+[    c-scripting-core] Creating script environments for esx_skin
+[           resources] Started resource esx_skin
+[    c-scripting-core] Creating script environments for esx_multicharacter
+[script:esx_multichar] SCRIPT ERROR: @esx_multicharacter/server/main.lua:221: WARNING: Multicharacter is disabled - please check your ESX configuration
+[           resources] Started resource esx_multicharacter
+[    c-scripting-core] Creating script environments for esx_notify
+[resources:esx_notify] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:14)
+[           resources] Started resource esx_notify (1 warning)
+[    c-scripting-core] Creating script environments for esx_progressbar
+[resources:esx_progre] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource esx_progressbar (1 warning)
+[    c-scripting-core] Creating script environments for esx_textui
+[           resources] Started resource esx_textui
+[38;5;42m[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[38;5;73m[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://siralexs-doygr5.users.cfx.re/
+[         script:yarn] [yarn]	yarn install v1.22.5
+[38;5;151m[         script:yarn] [yarn]	[1/4] Resolving packages...
+[38;5;151m[         script:yarn] [yarn]	success Already up-to-date.
+[         script:yarn] [yarn]	Done in 0.11s.
+[38;5;73m[ citizen-server-impl] Build tasks completed - starting resource sessionmanager-rdr3.
+[           resources] Warning: Resource sessionmanager-rdr3 does not support the current game (gta5).
+[38;5;21m[      script:webpack] chat: built webpack.config.js
+[ citizen-server-impl] Build tasks completed - starting resource chat.
+[    c-scripting-core] Creating script environments for chat
+[           resources] Started resource chat
+[ citizen-server-impl] sync thread hitch warning: timer interval of 136 milliseconds
+[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[38;5;42m[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
+[      script:oxmysql] Unable to establish a connection to the database (ER_ACCESS_DENIED_ERROR)!
+[      script:oxmysql] Error 1045: Access denied for user 'user'@'localhost' (using password: YES)
+> txaEvent "serverShuttingDown" "{＂delay＂:5000,＂author＂:＂SirAlexS＂,＂message＂:＂Server restarting (requested by SirAlexS).＂}"
+[38;5;84m[      script:monitor] [txAdmin] Server shutdown imminent. Kicking all players.
+
+================================================================
+======== FXServer Starting - 22.1.2024, 01:10:25                
+================================================================
+[           resources] Scanning resources.
+[           resources] Found 41 resources.
+[          svadhesive] Authenticating server license key...
+[          svadhesive] Server license key authentication succeeded. Welcome!
+[38;5;161m[    c-scripting-core] Creating script environments for sessionmanager
+[           resources] Started resource sessionmanager
+[38;5;161m[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v7.0.0 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for yarn
+[           resources] Started resource yarn
+[    c-scripting-core] Creating script environments for webpack
+[           resources] Started resource webpack
+[    c-scripting-core] Creating script environments for chat
+[           resources] Started resource chat
+[           resources] Started resource chat-theme-gtao
+[           resources] Started resource example-loadscreen
+[38;5;83m[           resources] Started resource fivem
+[38;5;83m[           resources] Started resource fivem-map-hipster
+[38;5;83m[           resources] Started resource fivem-map-skater
+[    c-scripting-core] Creating script environments for hardcap
+[38;5;83m[           resources] Started resource hardcap
+[    c-scripting-core] Creating script environments for mapmanager
+[           resources] [97mStarted resource mapmanager
+[    c-scripting-core] Creating script environments for money
+[           resources] Started resource money
+[    c-scripting-core] Creating script environments for money-fountain
+[           resources] Started resource money-fountain
+[           resources] Started resource money-fountain-example-map
+[    c-scripting-core] Creating script environments for oxmysql
+[           resources] Started resource oxmysql
+[    c-scripting-core] Creating script environments for ped-money-drops
+[           resources] Started resource ped-money-drops
+[    c-scripting-core] Creating script environments for player-data
+[           resources] Started resource player-data
+[    c-scripting-core] Creating script environments for playernames
+[38;5;83m[           resources] Started resource playernames
+[38;5;161m[    c-scripting-core] Creating script environments for rconlog
+[38;5;83m[           resources] Started resource rconlog
+[           resources] Warning: Resource redm-map-one does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource redm-map-one.
+[38;5;161m[    c-scripting-core] Creating script environments for runcode
+[           resources] Started resource runcode
+[           resources] Warning: Resource sessionmanager-rdr3 does not support the current game (gta5).
+[ citizen-server-impl] Couldn't start resource sessionmanager-rdr3.
+[           resources] Started resource spawnmanager
+[    c-scripting-core] Creating script environments for async
+[           resources] Started resource async
+[    c-scripting-core] Creating script environments for cron
+[           resources] Started resource cron
+[38;5;161m[    c-scripting-core] Creating script environments for es_extended
+[           resources] Started resource es_extended
+[    c-scripting-core] Creating script environments for esx_context
+[           resources] Started resource esx_context
+[    c-scripting-core] Creating script environments for esx_identity
+[           resources] Started resource esx_identity
+[    c-scripting-core] Creating script environments for esx_loadingscreen
+[           resources] Started resource esx_loadingscreen
+[           resources] Started resource esx_menu_default
+[           resources] Started resource esx_menu_dialog
+[           resources] Started resource esx_menu_list
+[           resources] Started resource skinchanger
+[    c-scripting-core] Creating script environments for esx_skin
+[           resources] Started resource esx_skin
+[    c-scripting-core] Creating script environments for esx_multicharacter
+[script:esx_multichar] SCRIPT ERROR: @esx_multicharacter/server/main.lua:221: [93mWARNING: Multicharacter is disabled - please check your ESX configuration
+[           resources] Started resource esx_multicharacter
+[    c-scripting-core] Creating script environments for esx_notify
+[resources:esx_notify] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:14)
+[           resources] Started resource esx_notify (1 warning)
+[    c-scripting-core] Creating script environments for esx_progressbar
+[resources:esx_progre] Warning: could not find file `nui/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource esx_progressbar (1 warning)
+[    c-scripting-core] Creating script environments for esx_textui
+[           resources] [0mStarted resource esx_textui
+[38;5;42m[      script:oxmysql] [10.4.32-MariaDB] Database server connection established!
+[38;5;73m[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://siralexs-doygr5.users.cfx.re/
+[38;5;220m[  script:es_extended] [INFO] ESX Legacy initialized
+[      script:hardcap] Connecting: MoinMoin
+[  script:es_extended] [INFO]  Player 1 Has been granted admin permissions via Ace Perms.
+[38;5;220m[  script:es_extended] [INFO] Player "MoinMoin" has connected to the server. ID: 1
+[38;5;220m[  script:es_extended] [INFO] Saved player "Dreggish Youtube"
+[ citizen-server-main] -> Quitting: SIGHUP received
