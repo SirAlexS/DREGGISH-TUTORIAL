@@ -3,15 +3,15 @@ server.cfg
 C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\cache
 cache
 
-#C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\txData
-#txData
+C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\txData
+txData
 
-#C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\db
-#db
+C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\db
+db
 
 C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server\crashes
 crashes
 
-#C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\db\default
-#default
-#LOCK
+C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\db\default
+default
+LOCK
