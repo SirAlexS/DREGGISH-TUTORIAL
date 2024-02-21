@@ -1,5 +1,6 @@
 # DREGGISH-TUTORIAL
 Alle Inhalte aus der YouTube Reihe, wie man einen eigenen FiveM Server baut
+-Alle GitHub Aktivitäten werden geloggt!!-
 
 # WICHTIG
 1) Achte darauf, dass du die Datei BEISPIEL server.cfg umbenennst in server.cfg --> Also das wort TEMPLATE und die Leerzeichen löschen
