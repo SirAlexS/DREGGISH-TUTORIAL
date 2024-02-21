@@ -2,7 +2,8 @@
 Alle Inhalte aus der YouTube Reihe, wie man einen eigenen FiveM Server baut
 
 # WICHTIG
-Achte darauf, dass du die Datei BEISPIEL server.cfg umbenennst in server.cfg --> Also das wort TEMPLATE und die Leerzeichen löschen
+1) Achte darauf, dass du die Datei BEISPIEL server.cfg umbenennst in server.cfg --> Also das wort TEMPLATE und die Leerzeichen löschen
+2) Wenn du die Logs aus dem Repo nutzt, beachte, dass du GUILD ID, Bot Token und vor Allem auch die Channel ID's ändern musst wie im Tutorial erklärt --> https://www.youtube.com/watch?v=3IFr7bKxE9w
 
 # BEZAHLTE SCRIPTS & MLO's IN DIESEM TEMPLATE
 Einige Scripts und MLO's könnt ihr zwar mit diesem Template herunterladen, diese werden jedoch nicht funktionieren, wenn ihr diese nicht selbst auch gekauft habt und in eurem KeyMaster habt. 
