@@ -12,3 +12,4 @@ Entweder entfernt ihr diese Dateien nach dem Download und ersetzt sie durch eure
 Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich euch nachstehend auf: 
 
 -- C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\resources\[MAPS]\hex_lsia --> https://turbosaif.tebex.io/package/598846
+-- C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\resources\[EXTRAS]\jobs_creator --> https://www.jaksam-scripts.com/package/5369987
