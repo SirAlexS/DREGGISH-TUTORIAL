@@ -11,5 +11,6 @@ Einige Scripts und MLO's könnt ihr zwar mit diesem Template herunterladen, dies
 Entweder entfernt ihr diese Dateien nach dem Download und ersetzt sie durch eure eigene Wahl, oder kauft die Scripts/MLO's, damit diese wie im Video zu sehen sind auch funktionieren. 
 Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich euch nachstehend auf: 
 
--- C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\resources\[MAPS]\hex_lsia --> https://turbosaif.tebex.io/package/598846
--- C:\Users\Administrator\Desktop\DREGGISH-TUTORIAL\server-data\resources\[EXTRAS]\jobs_creator --> https://www.jaksam-scripts.com/package/5369987
+-- \server-data\resources\[MAPS]\hex_lsia --> https://turbosaif.tebex.io/package/598846
+-- \server-data\resources\[EXTRAS]\jobs_creator --> https://www.jaksam-scripts.com/package/5369987
+-- \server-data\resources\[EXTRAS]\[HEX] --> https://hex-service.tebex.io/category/esx-scritps

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --clr-primary: #ed0202;
+    --clr-thirst: #0274ED;
+    --clr-food: #FF4646;
+
+    --carHud-fuel: #ed0202;
+    --carHud-progress-bg-fill: rgba(237, 2, 2, 0.2);;
+    --carHud-progress-fill: #ed0202;
+
+    --carHud-final-progress-bg-fill: rgba(252, 78, 81, .2);
+    --carHud-final-progress-fill: #FC4E51;
+
+    --announce-item: linear-gradient(to right, #ed020265 0%, rgba(255, 0, 0, 0) 87.63%);
+
+    --tc-background: linear-gradient(to right, #ed020265 0%, rgba(255, 0, 0, 0) 87.63%);
+
+    --clr-white: rgba(255, 255, 255, 1);
+
+    --ff-special: 'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    font-size: 2vh;
+    color: var(--clr-white);
+    font-weight: 600;
+    font-family: var(--ff-special);
+    overflow: hidden;
+}
