@@ -24,7 +24,7 @@ end)
 function givevehicle(_source, _args, vehicleType)
 	if havePermission(_source) then
 		if _args[1] == nil or _args[2] == nil then
-			TriggerClientEvent('esx:showNotification', _source, '/givevehicle playerID carModel [plate]')
+			TriggerClientEvent('esx:showNotification', _source, '~r~/givevehicle playerID carModel [plate]')
 		elseif _args[3] ~= nil then
 			local playerName = GetPlayerName(_args[1])
 			local plate = _args[3]
@@ -35,14 +35,12 @@ function givevehicle(_source, _args, vehicleType)
 			end	
 			plate = string.upper(plate)
 			TriggerClientEvent('esx_giveownedcar:spawnVehiclePlate', _source, _args[1], _args[2], plate, playerName, 'player', vehicleType)
-            exports["vehicles_keys"]:refreshPlayerOwnedVehicles(_args[1])
 		else
 			local playerName = GetPlayerName(_args[1])
 			TriggerClientEvent('esx_giveownedcar:spawnVehicle', _source, _args[1], _args[2], playerName, 'player', vehicleType)
-            exports["vehicles_keys"]:refreshPlayerOwnedVehicles(_args[1])
 		end
 	else
-		TriggerClientEvent('esx:showNotification', _source, 'You don\'t have permission to do this command!')
+		TriggerClientEvent('esx:showNotification', _source, '~r~You don\'t have permission to do this command!')
 	end
 end
 
@@ -87,7 +85,7 @@ end
 RegisterCommand('delcarplate', function(source, args)
 	if havePermission(source) then
 		if args[1] == nil then
-			TriggerClientEvent('esx:showNotification', source, '/delcarplate <plate>')
+			TriggerClientEvent('esx:showNotification', source, '~r~/delcarplate <plate>')
 		else
 			local plate = args[1]
 			if #args > 1 then
@@ -107,7 +105,7 @@ RegisterCommand('delcarplate', function(source, args)
 			end		
 		end
 	else
-		TriggerClientEvent('esx:showNotification', source, 'You don\'t have permission to do this command!')
+		TriggerClientEvent('esx:showNotification', source, '~r~You don\'t have permission to do this command!')
 	end		
 end)
 
@@ -144,12 +142,14 @@ AddEventHandler('esx_giveownedcar:setVehicle', function (vehicleProps, playerID,
 	local _source = playerID
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
-	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, `stored`) VALUES (@owner, @plate, @vehicle, @stored)', {
+	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, stored, type) VALUES (@owner, @plate, @vehicle, @stored, @type)',
+	{
 		['@owner']   = xPlayer.identifier,
 		['@plate']   = vehicleProps.plate,
 		['@vehicle'] = json.encode(vehicleProps),
-		['@stored'] = true
-	}, function()
+		['@stored']  = 1,
+		['type'] = vehicleType
+	}, function ()
 		if Config.ReceiveMsg then
 			TriggerClientEvent('esx:showNotification', _source, _U('received_car', string.upper(vehicleProps.plate)))
 		end
