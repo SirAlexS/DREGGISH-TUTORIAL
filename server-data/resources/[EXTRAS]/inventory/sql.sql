@@ -1,0 +1,10 @@
+ALTER TABLE `users` ADD COLUMN IF NOT EXISTS `hotbar` LONGTEXT NULL;
+ALTER TABLE `items` ADD COLUMN IF NOT EXISTS `desc` TEXT NULL;
+
+CREATE TABLE IF NOT EXISTS `inventories` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `identifier` text DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `data` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4;

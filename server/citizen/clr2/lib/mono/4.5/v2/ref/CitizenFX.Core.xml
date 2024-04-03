@@ -788,6 +788,16 @@
             </summary>
             <returns>reference to first byte</returns>
         </member>
+        <member name="F:CitizenFX.Core.ScriptSharedData.m_scheduledTime">
+            <summary>
+            Next time when our host needs to call in again
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.ScriptSharedData.m_scheduledTimeAsLong">
+            <summary>
+            Same as <see cref="F:CitizenFX.Core.ScriptSharedData.m_scheduledTime"/> but used in methods like <see cref="M:System.Threading.Interlocked.CompareExchange(System.Int64@,System.Int64,System.Int64)" /> who miss a <see cref="T:System.UInt64"/> overload.
+            </summary>
+        </member>
         <member name="F:CitizenFX.Core.MathUtil.ZeroTolerance">
             <summary>
             The value for which all absolute numbers smaller than are considered equal to zero.
@@ -7323,6 +7333,17 @@
             </summary>
             <param name="name">name of the resource we want to reference</param>
             <remarks>Doesn't guarantee the resource is initialized, active, or has an exports ready.</remarks>
+        </member>
+        <member name="M:CitizenFX.Core.ScriptInterface.RequestTick(System.UInt64)">
+            <summary>
+            Schedule a call-in at the given time, uses CAS to make sure we only overwrite if the given time is earlier than the stored one.
+            </summary>
+            <param name="time">Next time to request a call in</param>
+        </member>
+        <member name="M:CitizenFX.Core.ScriptInterface.RequestTickNextFrame">
+            <summary>
+            Schedule a call-in for the next frame.
+            </summary>
         </member>
         <member name="M:CitizenFX.Shared.Native.Natives.AddStateBagChangeHandler(CitizenFX.Core.CString,CitizenFX.Core.CString,System.Delegate)">
             <summary>

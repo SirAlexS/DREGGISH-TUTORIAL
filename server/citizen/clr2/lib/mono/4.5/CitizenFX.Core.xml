@@ -6764,7 +6764,7 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.FREEZE_ENTITY_POSITION">
             <summary>
-            Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using SET_ENTITY_COORDS.
+            Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using [`SET_ENTITY_COORDS`](#\_0x06843DA7060A026B).
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_AIR_DRAG_MULTIPLIER_FOR_PLAYERS_VEHICLE">
@@ -7796,6 +7796,8 @@
         <member name="F:CitizenFX.Core.Native.Hash.REMOVE_BLIP">
             <summary>
             Removes the blip from your map.
+            
+            **Note:** This function only works on the script that created the blip, if you wish to remove blips created by other scripts, see [`SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT`](#\_0x86A652570E5F25DD).
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.REMOVE_STATE_BAG_CHANGE_HANDLER">
@@ -7897,7 +7899,11 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_ENTITY_ROTATION">
             <summary>
-            SET_ENTITY_ROTATION
+            Sets the rotation of a specified entity in the game world.
+            
+            ```
+            NativeDB Introduced: v323
+            ```
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_ENTITY_ROUTING_BUCKET">
@@ -8759,18 +8765,28 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_VEHICLE_DOORS_LOCKED">
             <summary>
-            // Source GTA VC miss2 leak, matching constants for 0/2/4, testing
-            // They use 10 in am_mp_property_int, don't know what it does atm.
-            enum eCarLock {
-                CARLOCK_NONE = 0,
-                CARLOCK_UNLOCKED = 1,
-                CARLOCK_LOCKED = 2,
-                CARLOCK_LOCKOUT_PLAYER_ONLY = 3,
-                CARLOCK_LOCKED_PLAYER_INSIDE = 4,
-                CARLOCK_LOCKED_INITIALLY = 5,
-                CARLOCK_FORCE_SHUT_DOORS = 6,
-                CARLOCK_LOCKED_BUT_CAN_BE_DAMAGED = 7
+            Locks the doors of a specified vehicle to a defined lock state, affecting how players and NPCs can interact with the vehicle.
+            
+            ```
+            NativeDB Introduced: v323
+            ```
+            
+            ```cpp
+            enum eVehicleLockState {
+                VEHICLELOCK_NONE = 0, // No specific lock state, vehicle behaves according to the game's default settings.
+                VEHICLELOCK_UNLOCKED = 1, // Vehicle is fully unlocked, allowing free entry by players and NPCs.
+                VEHICLELOCK_LOCKED = 2, // Vehicle is locked, preventing entry by players and NPCs.
+                VEHICLELOCK_LOCKOUT_PLAYER_ONLY = 3, // Vehicle locks out only players, allowing NPCs to enter.
+                VEHICLELOCK_LOCKED_PLAYER_INSIDE = 4, // Vehicle is locked once a player enters, preventing others from entering.
+                VEHICLELOCK_LOCKED_INITIALLY = 5, // Vehicle starts in a locked state, but may be unlocked through game events.
+                VEHICLELOCK_FORCE_SHUT_DOORS = 6, // Forces the vehicle's doors to shut and lock.
+                VEHICLELOCK_LOCKED_BUT_CAN_BE_DAMAGED = 7, // Vehicle is locked but can still be damaged.
+                VEHICLELOCK_LOCKED_BUT_BOOT_UNLOCKED = 8, // Vehicle is locked, but its trunk/boot remains unlocked.
+                VEHICLELOCK_LOCKED_NO_PASSENGERS = 9, // Vehicle is locked and does not allow passengers, except for the driver.
+                VEHICLELOCK_CANNOT_ENTER = 10 // Vehicle is completely locked, preventing entry entirely, even if previously inside.
             };
+            
+            ```
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_VEHICLE_DOOR_BROKEN">
@@ -9073,11 +9089,6 @@
             **Note:**
             
             You may need to call [`SetPedHeadBlendData`](#\_0x9414E18B9434C2FE) prior to calling this native in order for it to work.
-            </summary>
-        </member>
-        <member name="F:CitizenFX.Core.Native.Hash._SET_PED_HAIR_COLOR">
-            <summary>
-            Used for freemode (online) characters.
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash._SET_PED_HEAD_OVERLAY_COLOR">
@@ -9650,7 +9661,7 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.FreezeEntityPosition(System.Int32,System.Boolean)">
             <summary>
-            Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using SET_ENTITY_COORDS.
+            Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using [`SET_ENTITY_COORDS`](#\_0x06843DA7060A026B).
             </summary>
             <param name="entity">
             The entity to freeze/unfreeze.
@@ -11264,6 +11275,7 @@
         <member name="M:CitizenFX.Core.Native.API.RemoveBlip(System.Int32@)">
             <summary>
             Removes the blip from your map.
+            **Note:** This function only works on the script that created the blip, if you wish to remove blips created by other scripts, see [`SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT`](#\_0x86A652570E5F25DD).
             </summary>
             <param name="blip">
             Blip handle to remove.
@@ -11452,10 +11464,28 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetEntityRotation(System.Int32,System.Single,System.Single,System.Single,System.Int32,System.Boolean)">
             <summary>
-            SET_ENTITY_ROTATION
+            Sets the rotation of a specified entity in the game world.
+            ```
+            NativeDB Introduced: v323
+            ```
             </summary>
+            <param name="entity">
+            The entity to rotate.
+            </param>
+            <param name="pitch">
+            The pitch (X-axis) rotation in degrees.
+            </param>
+            <param name="roll">
+            The roll (Y-axis) rotation in degrees.
+            </param>
+            <param name="yaw">
+            The yaw (Z-axis) rotation in degrees.
+            </param>
             <param name="rotationOrder">
-            The order yaw pitch roll are applied, see [`GET_ENTITY_ROTATION`](#\_0xAFBD61CC738D9EB9).
+            Specifies the order in which yaw, pitch, and roll are applied, see [`GET_ENTITY_ROTATION`](#\_0xAFBD61CC738D9EB9) for the available rotation orders.
+            </param>
+            <param name="bDeadCheck">
+            Usually set to `true`. Determines whether to check if the entity is dead before applying the rotation.
             </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetEntityRoutingBucket(System.Int32,System.Int32)">
@@ -12140,11 +12170,6 @@
             A float ranging from -1.0 to 1.0
             </param>
         </member>
-        <member name="M:CitizenFX.Core.Native.API.SetPedHairColor(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Used for freemode (online) characters.
-            </summary>
-        </member>
         <member name="M:CitizenFX.Core.Native.API.SetPedHeadBlendData(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Boolean)">
             <summary>
             For more info please refer to [this](https://gtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained) topic.
@@ -12578,19 +12603,32 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetVehicleDoorsLocked(System.Int32,System.Int32)">
             <summary>
-            // Source GTA VC miss2 leak, matching constants for 0/2/4, testing
-            // They use 10 in am_mp_property_int, don't know what it does atm.
-            enum eCarLock {
-            CARLOCK_NONE = 0,
-            CARLOCK_UNLOCKED = 1,
-            CARLOCK_LOCKED = 2,
-            CARLOCK_LOCKOUT_PLAYER_ONLY = 3,
-            CARLOCK_LOCKED_PLAYER_INSIDE = 4,
-            CARLOCK_LOCKED_INITIALLY = 5,
-            CARLOCK_FORCE_SHUT_DOORS = 6,
-            CARLOCK_LOCKED_BUT_CAN_BE_DAMAGED = 7
+            Locks the doors of a specified vehicle to a defined lock state, affecting how players and NPCs can interact with the vehicle.
+            ```
+            NativeDB Introduced: v323
+            ```
+            ```cpp
+            enum eVehicleLockState {
+            VEHICLELOCK_NONE = 0, // No specific lock state, vehicle behaves according to the game's default settings.
+            VEHICLELOCK_UNLOCKED = 1, // Vehicle is fully unlocked, allowing free entry by players and NPCs.
+            VEHICLELOCK_LOCKED = 2, // Vehicle is locked, preventing entry by players and NPCs.
+            VEHICLELOCK_LOCKOUT_PLAYER_ONLY = 3, // Vehicle locks out only players, allowing NPCs to enter.
+            VEHICLELOCK_LOCKED_PLAYER_INSIDE = 4, // Vehicle is locked once a player enters, preventing others from entering.
+            VEHICLELOCK_LOCKED_INITIALLY = 5, // Vehicle starts in a locked state, but may be unlocked through game events.
+            VEHICLELOCK_FORCE_SHUT_DOORS = 6, // Forces the vehicle's doors to shut and lock.
+            VEHICLELOCK_LOCKED_BUT_CAN_BE_DAMAGED = 7, // Vehicle is locked but can still be damaged.
+            VEHICLELOCK_LOCKED_BUT_BOOT_UNLOCKED = 8, // Vehicle is locked, but its trunk/boot remains unlocked.
+            VEHICLELOCK_LOCKED_NO_PASSENGERS = 9, // Vehicle is locked and does not allow passengers, except for the driver.
+            VEHICLELOCK_CANNOT_ENTER = 10 // Vehicle is completely locked, preventing entry entirely, even if previously inside.
             };
+            ```
             </summary>
+            <param name="vehicle">
+            The vehicle whose doors are to be locked.
+            </param>
+            <param name="doorLockStatus">
+            The lock state to apply to the vehicle's doors, see `eVehicleLockState`.
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetVehicleNumberPlateText(System.Int32,System.String)">
             <summary>
