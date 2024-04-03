@@ -15,4 +15,4 @@ Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich
 -- \server-data\resources\[MAPS]\hex_lsia --> https://turbosaif.tebex.io/package/598846
 -- \server-data\resources\[EXTRAS]\jobs_creator --> https://www.jaksam-scripts.com/package/5369987
 -- \server-data\resources\[EXTRAS]\[HEX] --> https://hex-service.tebex.io/category/esx-scritps
--- \server-data\resources\[EXTRAS]\inventory
+-- \server-data\resources\[EXTRAS]\inventory --> https://chezza.tebex.io/package/4770357
