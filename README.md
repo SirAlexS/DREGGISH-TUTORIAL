@@ -16,3 +16,5 @@ Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich
 -- \server-data\resources\[EXTRAS]\jobs_creator --> https://www.jaksam-scripts.com/package/5369987
 -- \server-data\resources\[EXTRAS]\[HEX] --> https://hex-service.tebex.io/category/esx-scritps
 -- \server-data\resources\[EXTRAS]\inventory --> https://chezza.tebex.io/package/4770357
+-- \server-data\resources\[MAPS]\Ocean_Medical_Center --> https://mxaizen-map.com
+-- \server-data\resources\[EXTRAS]\[5D]\5d-deathscreen --> https://store.5d-scripts.com

@@ -1,0 +1,1178 @@
+--OceanHospital
+-- Pharmacy
+-- Door to hospital
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 319.550,
+		objCoords  = vector3(-1832.817, -368.678, 49.584),
+		textCoords = vector3(-1832.817, -368.678, 49.584),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+        },
+-- Pharmacy exit rear
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.066,
+		objCoords  = vector3(-1821.917, -382.824, 49.563),
+		textCoords = vector3(-1821.917, -382.824, 49.563),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Phamarcy Office
+ 	{
+		objName = 'mx_ocean_porte_solo1',
+		objYaw = 229.476,
+		objCoords  = vector3(-1830.94, -383.916, 49.563),
+		textCoords = vector3(-1830.94, -383.916, 49.563),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+        },
+-- EMERGENCY
+-- Ground
+-- Left from Lobby
+ 	{
+		textCoords = vector3(-1857.98, -331.45, 49.45),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = false,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 230.0,
+				objCoords = vector3(-1858.546, -332.662, 49.481),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 49.999,
+				objCoords = vector3(-1856.881, -330.695, 49.481)
+			}
+		}
+	},
+-- Internal Medicine
+ 	{
+		textCoords = vector3(-1857.98, -331.45, 49.45),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = false,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door1a',
+				objYaw = 293.387,
+				objCoords = vector3(-1860.601, -330.470, 49.470),
+				},
+
+			{
+				objName = 'mx_ocean_door1b',
+				objYaw = 113.216,
+				objCoords = vector3(-1861.62, -328.100, 49.473)
+			}
+		}
+	},
+-- Stairs
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.594,
+		objCoords  = vector3(-1863.073, -317.315, 49.621),
+		textCoords = vector3(-1863.073, -317.315, 49.621),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Medicine
+   	 {
+		textCoords = vector3(-1871.24, -310.34, 49.49),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door1b',
+				objYaw = 319.3117,
+				objCoords = vector3(-1870.024, -311.301, 49.498),
+				},
+
+			{
+				objName = 'mx_ocean_door1a',
+				objYaw = 139.682,
+				objCoords = vector3(-1871.984, -309.627, 49.498)
+			}
+		}
+	 },
+-- Ramp down
+ 	 {
+		textCoords = vector3(-1851.85, -324.72, 49.47),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 229.644,
+				objCoords = vector3(-1850.959, -323.75, 48.471),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 49.485,
+				objCoords = vector3(-1852.657, -325.742, 48.471),
+			}
+		}
+	},
+-- Ramp up
+ 	{
+		textCoords = vector3(-1854.73, -328.11, 49.46),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 229.999,
+				objCoords = vector3(-1853.826, -327.137, 48.475),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 49.851,
+				objCoords = vector3(-1855.512, -329.1422, 48.474),
+			}
+		}
+	},
+-- Rooms
+-- Right of lobby
+ 	{
+		textCoords = vector3(-1846.14, -348.22, 49.44),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 49.364,
+				objCoords = vector3(-1845.144, -347.324, 49.484),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 229.304,
+				objCoords = vector3(-1846.828, -349.271, 49.487)
+			}
+		}
+	},
+-- Stairs
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.429,
+		objCoords  = vector3(-1838.334, -351.996, 41.416),
+		textCoords = vector3(-1838.334, -351.996, 41.416),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Vets
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.754,
+		objCoords  = vector3(-1826.356, -364.229, 49.593),
+		textCoords = vector3(-1826.356, -364.229, 49.593),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Womens Changeroom
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 230.195,
+		objCoords  = vector3(-1819.55, -356.295, 49.618),
+		textCoords = vector3(-1819.55, -356.295, 49.618),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Mens Changerooms
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 49.457,
+		objCoords  = vector3(-1818.026, -354.456, 49.634),
+		textCoords = vector3(-1818.026, -354.456, 49.634),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Testing
+ 	{
+		textCoords = vector3(-1826.58, -343.65, 49.48),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 318.601,
+				objCoords = vector3(-1825.543, -344.462, 49.497),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 139.999,
+				objCoords = vector3(-1827.499, -342.791, 49.497),
+			}
+		}
+	},
+-- Rear exit
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 141.329,
+		objCoords  = vector3(-1825.088, -338.693, 49.639),
+		textCoords = vector3(-1825.088, -338.693, 49.639),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Food to Wards
+-- Floor 1
+-- To wards
+ 	{
+		textCoords = vector3(-1875.03, -338.67, 53.76),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 229.308,
+				objCoords = vector3(-1876.098, -339.907, 53.773),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 49.594,
+				objCoords = vector3(-1874.421, -337.953, 53.775)
+			}
+		}
+	},
+-- Radiology Rear
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.603,
+		objCoords  = vector3(-1879.823, -332.171, 53.907),
+		textCoords = vector3(-1879.823, -332.171, 53.907),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 113
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.585,
+		objCoords  = vector3(-1888.046, -331.694, 53.893),
+		textCoords = vector3(-1888.046, -331.694, 53.893),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 112
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.895,
+		objCoords  = vector3(-1891.019, -335.183, 53.887),
+		textCoords = vector3(-1891.019, -335.183, 53.887),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 111
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.855,
+		objCoords  = vector3(-1894.354, -335.367, 53.885),
+		textCoords = vector3(-1894.354, -335.367, 53.885),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 110
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.730,
+		objCoords  = vector3(-1891.393, -328.808, 53.894),
+		textCoords = vector3(-1891.393, -328.808, 53.894),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 100 Left
+ 	{
+		textCoords = vector3(-1891.43, -318.56, 53.75),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree1',
+				objYaw = 49.325,
+				objCoords = vector3(-1892.087, -319.372, 52.740),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree1',
+				objYaw = 229.356,
+				objCoords = vector3(-1890.827, -317.915, 52.740)
+			}
+		}
+	},
+-- Radiology Office
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.574,
+		objCoords  = vector3(-1886.725, -319.483, 53.912),
+		textCoords = vector3(-1886.725, -319.483, 53.912),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Ward 100 Right
+ 	{
+		textCoords = vector3(-1882.100, -308.300, 53.77),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree1',
+				objYaw = 49.219,
+				objCoords = vector3(-1882.973, -308.717, 52.759),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree1',
+				objYaw = 229.516,
+				objCoords = vector3(-1881.713, -307.256, 52.762)
+			}
+		}
+	},
+-- Stairs
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.523,
+		objCoords  = vector3(-1863.297, -317.578, 53.938),
+		textCoords = vector3(-1863.297, -317.578, 53.938),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Radiology
+ 	{
+		textCoords = vector3(-1866.92, -319.82, 53.78),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 139.559,
+				objCoords = vector3(-1866.008, -320.965, 52.760),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 319.557,
+				objCoords = vector3(-1868.00, -319.266, 52.756)
+			}
+		}
+	},
+-- Ramp
+ 	{
+		textCoords = vector3(-1859.04, -321.26, 53.82),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 319.130,
+				objCoords = vector3(-1859.961, -320.354, 52.810),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 139.525,
+				objCoords = vector3(-1857.976, -322.063, 52.810),
+			}
+		}
+	},
+-- Consulting 4
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 319.883,
+		objCoords  = vector3(-1834.862, -341.772, 53.953),
+		textCoords = vector3(-1834.862, -341.772, 53.953),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	},
+-- Stairs
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.345,
+		objCoords  = vector3(-1834.571, -347.611, 53.925),
+		textCoords = vector3(-1834.571, -347.611, 53.925),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Consulting 3
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 320.055,
+		objCoords  = vector3(-1831.327, -344.787, 53.948),
+		textCoords = vector3(-1831.327, -344.787, 53.948),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Consulting 2
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 319.339,
+		objCoords  = vector3(-1824.472, -350.631, 53.948),
+		textCoords = vector3(-1824.472, -350.631, 53.948),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Psychologist 2
+ 	{
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 319.779,
+		objCoords  = vector3(-1820.938, -353.629, 53.955),
+		textCoords = vector3(-1820.938, -353.629, 53.955),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Psychologist 1
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 229.157,
+		objCoords  = vector3(-1817.548, -358.603, 53.938),
+		textCoords = vector3(-1817.548, -358.603, 53.938),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Consulting 1
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 230.205,
+		objCoords  = vector3(-1819.915, -361.342, 53.934),
+		textCoords = vector3(-1819.915, -361.342, 53.934),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Optician
+ 	 {
+		textCoords = vector3(-1824.68, -366.94, 53.76),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 49.724,
+				objCoords = vector3(-1824.019, -366.183, 53.800),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 229.526,
+				objCoords = vector3(-1825.689, -368.147, 53.799),
+			}
+		}
+	 },
+-- Physiotherapy
+ 	 {
+		textCoords = vector3(-1831.96, -375.70, 53.74),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 49.717,
+				objCoords = vector3(-1831.289, -374.732, 53.766),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 229.526,
+				objCoords = vector3(-1832.956, -376.694, 53.765),
+			}
+		}
+	 },
+-- Doors to food
+ 	 {
+		textCoords = vector3(-1844.43, -365.14, 53.73),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 49.397,
+				objCoords = vector3(-1843.726, -364.097, 53.754),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 229.285,
+				objCoords = vector3(-1845.406, -366.054, 53.763)
+			}
+		}
+	 },
+-- Floor 2
+-- Left Building
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.523,
+		objCoords  = vector3(-1863.37, -317.658, 58.315),
+		textCoords = vector3(-1863.37, -317.658, 58.315),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward 200
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 62.992,
+		objCoords  = vector3(-1869.231, -322.545, 58.292),
+		textCoords = vector3(-1869.231, -322.545, 58.292),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Meeting Room Hall
+ 	 {
+		textCoords = vector3(-1863.04, -326.41, 58.15),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 49.068,
+				objCoords = vector3(-1862.216, -325.474, 58.165),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 229.475,
+				objCoords = vector3(-1863.890, -327.429, 58.168),
+			}
+		}
+	 },
+-- Helipad
+ 	 {
+		textCoords = vector3(-1866.23, -329.93, 58.12),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree2',
+				objYaw = 196.809,
+				objCoords = vector3(-1864.968, -329.663, 57.117),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree2',
+				objYaw = 16.879,
+				objCoords = vector3(-1867.442, -330.423, 57.117),
+			}
+		}
+	 },
+-- Door to Wards
+ 	 {
+		textCoords = vector3(-1872.10, -329.34, 58.14),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door1a',
+				objYaw = 321.154,
+				objCoords = vector3(-1870.974, -330.079, 58.157),
+				},
+
+			{
+				objName = 'mx_ocean_door1b',
+				objYaw = 142.526,
+				objCoords = vector3(-1872.993, -328.479, 58.158),
+			}
+		}
+	 },
+-- Ward 201
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 52.647,
+		objCoords  = vector3(-1877.309, -332.921, 58.264),
+		textCoords = vector3(-1877.309, -332.921, 58.264),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward 202
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 196.777,
+		objCoords  = vector3(-1879.133, -334.789, 58.252),
+		textCoords = vector3(-1879.133, -334.789, 58.252),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward 203
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 51.502,
+		objCoords  = vector3(-1894.508, -333.074, 58.243),
+		textCoords = vector3(-1894.508, -333.074, 58.243),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward 204
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 50.746,
+		objCoords  = vector3(-1887.674, -324.483, 58.254),
+		textCoords = vector3(-1887.674, -324.483, 58.254),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward 206
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 268.491,
+		objCoords  = vector3(-1882.922, -311.957, 58.292),
+		textCoords = vector3(-1882.922, -311.957, 58.292),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Ward Exit - Ward 201
+ 	 {
+		textCoords = vector3(-1883.08, -307.90, 58.14),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door1a',
+				objYaw = 269.141,
+				objCoords = vector3(-1882.89, -309.375, 58.168),
+				},
+
+			{
+				objName = 'mx_ocean_door1b',
+				objYaw = 88.813,
+				objCoords = vector3(-1882.831, -306.799, 58.168),
+			}
+		}
+	 },
+-- Hallway to Meeting
+ 	 {
+		textCoords = vector3(-1844.96, -340.84, 58.14),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door2a',
+				objYaw = 241.413,
+				objCoords = vector3(-1845.573, -342.029, 58.159),
+				},
+
+			{
+				objName = 'mx_ocean_door2b',
+				objYaw = 61.709,
+				objCoords = vector3(-1844.336, -339.768, 58.158),
+			}
+		}
+	 },
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.579,
+		objCoords  = vector3(-1834.569, -347.857, 58.284),
+		textCoords = vector3(-1834.569, -347.857, 58.284),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.172,
+		objCoords  = vector3(-1838.383, -352.094, 58.272),
+		textCoords = vector3(-1838.383, -352.094, 58.272),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Helipad
+ 	 {
+		textCoords = vector3(-1847.05, -348.10, 58.12),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree2',
+				objYaw = 36.709,
+				objCoords = vector3(-1848.231, -349.050, 57.114),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree2',
+				objYaw = 216.631,
+				objCoords = vector3(-1846.152, -347.487, 57.114),
+			}
+		}
+	 },
+-- Floor 8
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.630,
+		objCoords  = vector3(-1863.167, -317.426, 84.206),
+		textCoords = vector3(-1863.167, -317.426, 84.206),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Office
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 231.129,
+		objCoords  = vector3(-1884.589, -327.909, 84.166),
+		textCoords = vector3(-1884.589, -327.909, 84.166),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Office closer to stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 231.679,
+		objCoords  = vector3(-1878.861, -320.719, 84.180),
+		textCoords = vector3(-1878.861, -320.719, 84.180	),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Office Main
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 233.224,
+		objCoords  = vector3(-1879.66, -306.066, 84.207),
+		textCoords = vector3(-1879.66, -306.066, 84.207),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Floor 8 Left
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.249,
+		objCoords  = vector3(-1834.577, -347.619, 84.203),
+		textCoords = vector3(-1834.577, -347.619, 84.203),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.454,
+		objCoords  = vector3(-1838.338, -352.028, 84.199),
+		textCoords = vector3(-1838.338, -352.028, 84.199),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Roof Right
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.014,
+		objCoords  = vector3(-1863.22, -317.491, 92.851),
+		textCoords = vector3(-1863.22, -317.491, 92.851),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Roof Left
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 140.252,
+		objCoords  = vector3(-1834.517, -347.499, 92.845),
+		textCoords = vector3(-1834.517, -347.499, 92.845),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Floor -2
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 138.365,
+		objCoords  = vector3(-1863.134, -317.388, 41.410),
+		textCoords = vector3(-1863.134, -317.388, 41.410),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- Surgery
+ 	 {
+		objName = 'mx_ocean_porte_bloc2',
+		objYaw = 229.417,
+		objCoords  = vector3(-1868.50, -344.647, 40.271),
+		textCoords = vector3(-1868.50, -344.647, 40.271),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 4,
+		size = 3
+       	 },
+-- Ramp Up
+ 	 {
+		textCoords = vector3(-1853.58, -327.55, 41.28),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 229.714,
+				objCoords = vector3(-1852.546, -326.769, 40.298),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 49.095,
+				objCoords = vector3(-1854.253, -328.758, 40.297),
+			}
+		}
+	 },
+-- Surgery Rear
+ 	 {
+		objName = 'mx_ocean_porte_bloc2',
+		objYaw = 139.293,
+		objCoords  = vector3(-1877.595, -316.468, 40.269),
+		textCoords = vector3(-1877.595, -316.468, 40.269),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 4,
+		size = 3
+       	 },
+-- IRM
+ 	 {
+		textCoords = vector3(-1865.59, -350.99, 41.27),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 229.571,
+				objCoords = vector3(-1864.716, -350.047, 40.260),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 49.539,
+				objCoords = vector3(-1866.415, -352.038, 40.260),
+			}
+		}
+	 },
+-- Scanner
+ 	 {
+		textCoords = vector3(-1865.59, -350.99, 41.27),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 2,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 139.530,
+				objCoords = vector3(-1870.74, -355.532, 40.258),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 319.519,
+				objCoords = vector3(-1872.732, -353.830, 40.258),
+			}
+		}
+	 },
+-- Storage
+ 	 {
+		textCoords = vector3(-1878.03, -352.57, 41.25),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_door1a',
+				objYaw = 319.475,
+				objCoords = vector3(-1876.866, -353.401, 41.299),
+				},
+
+			{
+				objName = 'mx_ocean_door1b',
+				objYaw = 139.841,
+				objCoords = vector3(-1878.825, -351.729, 41.299),
+			}
+		}
+	 },
+-- Stairs
+ 	 {
+		objName = 'mx_ocean_porte_solo2',
+		objYaw = 139.103,
+		objCoords  = vector3(-1838.347, -352.085, 49.603),
+		textCoords = vector3(-1838.347, -352.085, 49.603),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,  	   
+		distance = 2,
+		size = 3
+       	 },
+-- To Garage
+ 	 {
+		textCoords = vector3(-1846.89, -364.84, 40.83),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 3,
+		doors = {
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 230.00,
+				objCoords = vector3(-1845.729, -363.861, 39.839),
+				},
+
+			{
+				objName = 'mx_ocean_porte_entree3',
+				objYaw = 49.999,
+				objCoords = vector3(-1847.414, -365.870, 39.840),
+			}
+		}
+	 },
+-- Garage Doors
+ 	 {
+		textCoords = vector3(-1815.34, -341.24, 44.80),
+		authorizedJobs = { 'ambulance' },
+		locking = false,
+		locked = true,
+		pickable = false,
+		distance = 10,
+		doors = {
+			{
+				objName = 'ocean_door_garage_high',
+				objYaw = 140.192,
+				objCoords = vector3(-1811.926, -342.784, 45.005),
+				},
+
+			{
+				objName = 'ocean_door_garage_high',
+				objYaw = 140.227,
+				objCoords = vector3(-1817.708, -337.999, 45.015),
+			}
+		}
+	 },

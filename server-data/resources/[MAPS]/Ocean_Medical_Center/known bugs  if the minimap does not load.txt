@@ -1,0 +1,10 @@
+
+known bugs :
+
+If the minimap does not load :
+- Go to, another mlo with a minimap, then come back to hospital , the minimap will load now,
+
+
+
+
+
