@@ -155,29 +155,34 @@ AddEventHandler('esx_ambulancejob:useItem', function(itemName)
   end
 end)
 
-function StartDistressSignal()
-  CreateThread(function()
-    local timer = Config.BleedoutTimer
+-- function StartDistressSignal()
+--   CreateThread(function()
+--     local timer = Config.BleedoutTimer
 
-    while timer > 0 and isDead do
-      Wait(0)
-      timer = timer - 30
+--     while timer > 0 and isDead do
+--       Wait(0)
+--       timer = timer - 30
 
-      SetTextFont(4)
-      SetTextScale(0.5, 0.5)
-      SetTextColour(200, 50, 50, 255)
-      SetTextDropshadow(0.1, 3, 27, 27, 255)
-      BeginTextCommandDisplayText('STRING')
-      AddTextComponentSubstringPlayerName(_U('distress_send'))
-      EndTextCommandDisplayText(0.43, 0.77)
+--       SetTextFont(4)
+--       SetTextScale(0.5, 0.5)
+--       SetTextColour(200, 50, 50, 255)
+--       SetTextDropshadow(0.1, 3, 27, 27, 255)
+--       BeginTextCommandDisplayText('STRING')
+--       AddTextComponentSubstringPlayerName(_U('distress_send'))
+--       EndTextCommandDisplayText(0.43, 0.77)
 
-      if IsControlJustReleased(0, 47) then
-        SendDistressSignal()
-        break
-      end
-    end
-  end)
-end
+--       if IsControlJustReleased(0, 47) then
+--         SendDistressSignal()
+--         break
+--       end
+--     end
+--   end)
+-- end
+
+RegisterNetEvent("esx_ambulancejob:deathscreen:distress", function()
+  exports["lb-phone"]:SendCompanyMessage("ambulance", "Bewusstlose Person", false)
+  exports["lb-phone"]:SendCompanyCoords("ambulance")
+end)
 
 function SendDistressSignal()
   local playerPed = PlayerPedId()

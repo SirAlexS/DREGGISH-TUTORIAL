@@ -18,3 +18,4 @@ Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich
 -- \server-data\resources\[EXTRAS]\inventory --> https://chezza.tebex.io/package/4770357
 -- \server-data\resources\[MAPS]\Ocean_Medical_Center --> https://mxaizen-map.com
 -- \server-data\resources\[EXTRAS]\[5D]\5d-deathscreen --> https://store.5d-scripts.com
+-- \server-data\resources\[PHONE]\lb-phone --> https://store.lbphone.com/category/2238536
