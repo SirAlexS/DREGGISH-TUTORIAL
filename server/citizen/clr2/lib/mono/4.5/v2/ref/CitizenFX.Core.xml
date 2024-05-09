@@ -41,7 +41,7 @@
             <inheritdoc cref="M:CitizenFX.Core.Func.ConstructCommandRemapped(System.Object,System.Reflection.MethodInfo)"/>
         </member>
         <member name="T:CitizenFX.Core.KeyMapAttribute">
-            <summary>Does nothing on server side</summary>
+            <summary>Does nothing on server side or RedM</summary>
         </member>
         <member name="P:CitizenFX.Core.KeyMapAttribute.RemapParameters">
             <returns></returns>
@@ -64,6 +64,9 @@
             Register this method to listen for the given <see cref="P:CitizenFX.Core.EventHandlerAttribute.Event"/> when this <see cref="T:CitizenFX.Core.BaseScript"/> is loaded
             </summary>
             <remarks>Only works on <see cref="T:CitizenFX.Core.BaseScript"/> inherited class methods</remarks>
+        </member>
+        <member name="T:CitizenFX.Core.NuiCallbackAttribute">
+            <summary>Does nothing on server side</summary>
         </member>
         <member name="T:CitizenFX.Core.ExportAttribute">
             <summary>
@@ -141,6 +144,18 @@
             </example>
             <param name="msecs">The amount of time by which to delay scheduling this interval function.</param>
             <returns>An awaitable task.</returns>
+        </member>
+        <member name="M:CitizenFX.Core.BaseScript.RegisterNuiCallback(System.String,System.Delegate)">
+            <summary>Does nothing on server side</summary>
+        </member>
+        <member name="M:CitizenFX.Core.BaseScript.UnregisterNuiCallback(System.String)">
+            <summary>Does nothing on server side</summary>
+        </member>
+        <member name="M:CitizenFX.Core.BaseScript.AddNuiCallback(System.String,System.Delegate)">
+            <summary>Does nothing on server side</summary>
+        </member>
+        <member name="M:CitizenFX.Core.BaseScript.RemoveNuiCallback(System.String)">
+            <summary>Does nothing on server side</summary>
         </member>
         <member name="M:CitizenFX.Core.BaseScript.RegisterScript(CitizenFX.Core.BaseScript)">
             <summary>
@@ -7720,6 +7735,30 @@
             GET_VEHICLE_STEERING_ANGLE
             </summary>
         </member>
+        <member name="M:CitizenFX.Shared.Native.Natives.GetVehicleType(System.Int32)">
+            <summary>
+            Returns the type of the passed vehicle.
+            
+            For client scripts, reference the more detailed [GET_VEHICLE_TYPE_RAW](#\_0xDE73BC10) native.
+            
+            ### Vehicle types
+            
+            *   automobile
+            *   bike
+            *   boat
+            *   heli
+            *   plane
+            *   submarine
+            *   trailer
+            *   train
+            </summary>
+            <param name="vehicle">
+            The vehicle's entity handle.
+            </param>
+            <returns>
+            If the entity is a vehicle, the vehicle type. If it is not a vehicle, the return value will be null.
+            </returns>
+        </member>
         <member name="M:CitizenFX.Shared.Native.Natives.InvokeFunctionReference(CitizenFX.Core.CString,CitizenFX.Core.CString,System.Int32,System.Int32@)">
             <summary>
             INVOKE_FUNCTION_REFERENCE
@@ -8141,6 +8180,24 @@
         <member name="F:CitizenFX.Shared.Native.Hash.GET_VEHICLE_STEERING_ANGLE">
             <summary>
             GET_VEHICLE_STEERING_ANGLE
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Shared.Native.Hash.GET_VEHICLE_TYPE">
+            <summary>
+            Returns the type of the passed vehicle.
+            
+            For client scripts, reference the more detailed [GET_VEHICLE_TYPE_RAW](#\_0xDE73BC10) native.
+            
+            ### Vehicle types
+            
+            *   automobile
+            *   bike
+            *   boat
+            *   heli
+            *   plane
+            *   submarine
+            *   trailer
+            *   train
             </summary>
         </member>
         <member name="F:CitizenFX.Shared.Native.Hash.INVOKE_FUNCTION_REFERENCE">

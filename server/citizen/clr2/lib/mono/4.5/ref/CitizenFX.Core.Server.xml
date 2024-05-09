@@ -6817,6 +6817,11 @@
             Can be used to get a console variable casted back to `int` (an integer value).
             </summary>
         </member>
+        <member name="F:CitizenFX.Core.Native.Hash.GET_CURRENT_PED_WEAPON">
+            <summary>
+            Returns the hash of weapon the Ped is currently using.
+            </summary>
+        </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_CURRENT_RESOURCE_NAME">
             <summary>
             Returns the name of the currently executing resource.
@@ -7311,7 +7316,9 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_SELECTED_PED_WEAPON">
             <summary>
-            Returns a hash of selected ped weapon.
+            An alias of [GET_CURRENT_PED_WEAPON](#\_0xB0237302).
+            
+            Note, the client-side [GET_SELECTED_PED_WEAPON](#\_0x0A6DB4965674D243) native returns the weapon selected via the HUD (weapon wheel). This data is not available to FXServer.
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_STATE_BAG_VALUE">
@@ -7476,6 +7483,8 @@
         <member name="F:CitizenFX.Core.Native.Hash.GET_VEHICLE_TYPE">
             <summary>
             Returns the type of the passed vehicle.
+            
+            For client scripts, reference the more detailed [GET_VEHICLE_TYPE_RAW](#\_0xDE73BC10) native.
             
             ### Vehicle types
             
@@ -8647,9 +8656,7 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_PLAYER_INVINCIBLE">
             <summary>
-            Simply sets you as invincible (Health will not deplete).  
-            Use 0x733A643B5B0C53C1 instead if you want Ragdoll enabled, which is equal to:  
-            *(DWORD *)(playerPedAddress + 0x188) |= (1 &lt;&lt; 9);
+            Make the player impervious to all forms of damage.
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_PLAYER_MODEL">
@@ -8850,8 +8857,70 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.TASK_GO_TO_COORD_ANY_MEANS">
             <summary>
-            example from fm_mission_controller
-            TASK::TASK_GO_TO_COORD_ANY_MEANS(l_649, sub_f7e86(-1, 0), 1.0, 0, 0, 786603, 0xbf800000);
+            Tells a ped to go to a coord by any means.
+            
+            ```cpp
+            enum eDrivingMode {
+              DF_StopForCars = 1,
+              DF_StopForPeds = 2,
+              DF_SwerveAroundAllCars = 4,
+              DF_SteerAroundStationaryCars	= 8,
+              DF_SteerAroundPeds = 16,
+              DF_SteerAroundObjects = 32,
+              DF_DontSteerAroundPlayerPed = 64,
+              DF_StopAtLights = 128,
+              DF_GoOffRoadWhenAvoiding = 256,
+              DF_DriveIntoOncomingTraffic = 512,
+              DF_DriveInReverse = 1024,
+            
+              // If pathfinding fails, cruise randomly instead of going on a straight line
+              DF_UseWanderFallbackInsteadOfStraightLine = 2048,
+            
+              DF_AvoidRestrictedAreas = 4096,
+            
+              // These only work on MISSION_CRUISE
+              DF_PreventBackgroundPathfinding = 8192,
+              DF_AdjustCruiseSpeedBasedOnRoadSpeed = 16384,
+            
+              DF_UseShortCutLinks =  262144,
+              DF_ChangeLanesAroundObstructions = 524288,
+              DF_UseSwitchedOffNodes =  2097152,	// cruise tasks ignore this anyway--only used for goto's
+              DF_PreferNavmeshRoute =  4194304,	// if you're going to be primarily driving off road
+            
+              // Only works for planes using MISSION_GOTO, will cause them to drive along the ground instead of fly
+              DF_PlaneTaxiMode =  8388608,
+            
+              DF_ForceStraightLine = 16777216,
+              DF_UseStringPullingAtJunctions = 33554432,
+            
+              DF_AvoidHighways = 536870912,
+              DF_ForceJoinInRoadDirection = 1073741824,
+            
+              // Standard driving mode. stops for cars, peds, and lights, goes around stationary obstructions
+              DRIVINGMODE_STOPFORCARS = 786603, // DF_StopForCars|DF_StopForPeds|DF_SteerAroundObjects|DF_SteerAroundStationaryCars|DF_StopAtLights|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions,		// Obey lights too
+            
+              // Like the above, but doesn't steer around anything in its way - will only wait instead.
+              DRIVINGMODE_STOPFORCARS_STRICT = 262275, // DF_StopForCars|DF_StopForPeds|DF_StopAtLights|DF_UseShortCutLinks, // Doesn't deviate an inch.
+            
+              // Default "alerted" driving mode. drives around everything, doesn't obey lights
+              DRIVINGMODE_AVOIDCARS = 786469, // DF_SwerveAroundAllCars|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars,
+            
+              // Very erratic driving. difference between this and AvoidCars is that it doesn't use the brakes at ALL to help with steering
+              DRIVINGMODE_AVOIDCARS_RECKLESS = 786468, // DF_SwerveAroundAllCars|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions,
+            
+              // Smashes through everything
+              DRIVINGMODE_PLOUGHTHROUGH = 262144, // DF_UseShortCutLinks
+            
+              // Drives normally except for the fact that it ignores lights
+              DRIVINGMODE_STOPFORCARS_IGNORELIGHTS = 786475, // DF_StopForCars|DF_SteerAroundStationaryCars|DF_StopForPeds|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions
+            
+              // Try to swerve around everything, but stop for lights if necessary
+              DRIVINGMODE_AVOIDCARS_OBEYLIGHTS = 786597, // DF_SwerveAroundAllCars|DF_StopAtLights|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars
+            
+              // Swerve around cars, be careful around peds, and stop for lights
+              DRIVINGMODE_AVOIDCARS_STOPFORPEDS_OBEYLIGHTS = 786599 // DF_SwerveAroundAllCars|DF_StopAtLights|DF_StopForPeds|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars
+            };
+            ```
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.TASK_GO_TO_ENTITY">
@@ -9750,6 +9819,17 @@
             Returns the convar value if it can be found, otherwise it returns the assigned `default`.
             </returns>
         </member>
+        <member name="M:CitizenFX.Core.Native.API.GetCurrentPedWeapon(System.Int32)">
+            <summary>
+            Returns the hash of weapon the Ped is currently using.
+            </summary>
+            <param name="ped">
+            The target ped.
+            </param>
+            <returns>
+            The weapon hash.
+            </returns>
+        </member>
         <member name="M:CitizenFX.Core.Native.API.GetCurrentResourceName">
             <summary>
             Returns the name of the currently executing resource.
@@ -10558,7 +10638,8 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetSelectedPedWeapon(System.Int32)">
             <summary>
-            Returns a hash of selected ped weapon.
+            An alias of [GET_CURRENT_PED_WEAPON](#\_0xB0237302).
+            Note, the client-side [GET_SELECTED_PED_WEAPON](#\_0x0A6DB4965674D243) native returns the weapon selected via the HUD (weapon wheel). This data is not available to FXServer.
             </summary>
             <param name="ped">
             The target ped.
@@ -10779,6 +10860,7 @@
         <member name="M:CitizenFX.Core.Native.API.GetVehicleType(System.Int32)">
             <summary>
             Returns the type of the passed vehicle.
+            For client scripts, reference the more detailed [GET_VEHICLE_TYPE_RAW](#\_0xDE73BC10) native.
             ### Vehicle types
             *   automobile
             *   bike
@@ -12405,10 +12487,11 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetPlayerInvincible(System.String,System.Boolean)">
             <summary>
-            Simply sets you as invincible (Health will not deplete).
-            Use 0x733A643B5B0C53C1 instead if you want Ragdoll enabled, which is equal to:
-            *(DWORD *)(playerPedAddress + 0x188) |= (1 &lt;&lt; 9);
+            Make the player impervious to all forms of damage.
             </summary>
+            <param name="player">
+            The player index.
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetPlayerModel(System.String,System.UInt32)">
             <summary>
@@ -12725,9 +12808,82 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.TaskGoToCoordAnyMeans(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Boolean,System.Int32,System.Single)">
             <summary>
-            example from fm_mission_controller
-            TASK::TASK_GO_TO_COORD_ANY_MEANS(l_649, sub_f7e86(-1, 0), 1.0, 0, 0, 786603, 0xbf800000);
+            Tells a ped to go to a coord by any means.
+            ```cpp
+            enum eDrivingMode {
+            DF_StopForCars = 1,
+            DF_StopForPeds = 2,
+            DF_SwerveAroundAllCars = 4,
+            DF_SteerAroundStationaryCars	= 8,
+            DF_SteerAroundPeds = 16,
+            DF_SteerAroundObjects = 32,
+            DF_DontSteerAroundPlayerPed = 64,
+            DF_StopAtLights = 128,
+            DF_GoOffRoadWhenAvoiding = 256,
+            DF_DriveIntoOncomingTraffic = 512,
+            DF_DriveInReverse = 1024,
+            // If pathfinding fails, cruise randomly instead of going on a straight line
+            DF_UseWanderFallbackInsteadOfStraightLine = 2048,
+            DF_AvoidRestrictedAreas = 4096,
+            // These only work on MISSION_CRUISE
+            DF_PreventBackgroundPathfinding = 8192,
+            DF_AdjustCruiseSpeedBasedOnRoadSpeed = 16384,
+            DF_UseShortCutLinks =  262144,
+            DF_ChangeLanesAroundObstructions = 524288,
+            DF_UseSwitchedOffNodes =  2097152,	// cruise tasks ignore this anyway--only used for goto's
+            DF_PreferNavmeshRoute =  4194304,	// if you're going to be primarily driving off road
+            // Only works for planes using MISSION_GOTO, will cause them to drive along the ground instead of fly
+            DF_PlaneTaxiMode =  8388608,
+            DF_ForceStraightLine = 16777216,
+            DF_UseStringPullingAtJunctions = 33554432,
+            DF_AvoidHighways = 536870912,
+            DF_ForceJoinInRoadDirection = 1073741824,
+            // Standard driving mode. stops for cars, peds, and lights, goes around stationary obstructions
+            DRIVINGMODE_STOPFORCARS = 786603, // DF_StopForCars|DF_StopForPeds|DF_SteerAroundObjects|DF_SteerAroundStationaryCars|DF_StopAtLights|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions,		// Obey lights too
+            // Like the above, but doesn't steer around anything in its way - will only wait instead.
+            DRIVINGMODE_STOPFORCARS_STRICT = 262275, // DF_StopForCars|DF_StopForPeds|DF_StopAtLights|DF_UseShortCutLinks, // Doesn't deviate an inch.
+            // Default "alerted" driving mode. drives around everything, doesn't obey lights
+            DRIVINGMODE_AVOIDCARS = 786469, // DF_SwerveAroundAllCars|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars,
+            // Very erratic driving. difference between this and AvoidCars is that it doesn't use the brakes at ALL to help with steering
+            DRIVINGMODE_AVOIDCARS_RECKLESS = 786468, // DF_SwerveAroundAllCars|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions,
+            // Smashes through everything
+            DRIVINGMODE_PLOUGHTHROUGH = 262144, // DF_UseShortCutLinks
+            // Drives normally except for the fact that it ignores lights
+            DRIVINGMODE_STOPFORCARS_IGNORELIGHTS = 786475, // DF_StopForCars|DF_SteerAroundStationaryCars|DF_StopForPeds|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions
+            // Try to swerve around everything, but stop for lights if necessary
+            DRIVINGMODE_AVOIDCARS_OBEYLIGHTS = 786597, // DF_SwerveAroundAllCars|DF_StopAtLights|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars
+            // Swerve around cars, be careful around peds, and stop for lights
+            DRIVINGMODE_AVOIDCARS_STOPFORPEDS_OBEYLIGHTS = 786599 // DF_SwerveAroundAllCars|DF_StopAtLights|DF_StopForPeds|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars
+            };
+            ```
             </summary>
+            <param name="ped">
+            The `Ped` Handle.
+            </param>
+            <param name="x">
+            The goto target coordinate.
+            </param>
+            <param name="y">
+            The goto target coordinate.
+            </param>
+            <param name="z">
+            The goto target coordinate.
+            </param>
+            <param name="fMoveBlendRatio">
+            0.0 = still, 1.0 = walk, 2.0 = run, 3.0 = sprint.
+            </param>
+            <param name="vehicle">
+            If defined, the pedestrian will only move if said vehicle exists. If you don't want any sort of association, just set it to `0`.
+            </param>
+            <param name="bUseLongRangeVehiclePathing">
+            Setting to `true` tells the vehicle to use longrange vehicle pathing.
+            </param>
+            <param name="drivingFlags">
+            See `eDrivingMode` enum.
+            </param>
+            <param name="fMaxRangeToShootTargets">
+            Determines the maximum distance at which the `Ped` will engage in combat with threatening targets.
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.TaskGoToEntity(System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Int32)">
             <summary>
