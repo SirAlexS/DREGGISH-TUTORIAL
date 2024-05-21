@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --clr-primary: #d73838;
+    --clr-secondary: #d63838;
+    --clr-white: rgba(255, 255, 255, 1);
+    --clr-green: #3BD738;
+    --clr-arrows: #ff5959;
+
+    --clr-main-background: linear-gradient(269.4deg, #1b0808 -0.19%, rgba(27, 8, 8, 0) 48.61%, #1b0808 99.48%);
+
+    --clr-item-background: linear-gradient(180deg, rgba(191, 58, 58, 0.15) 0%, rgba(191, 58, 58, 0) 100%);
+    --clr-item-border: linear-gradient(180deg, #cd4141 0%, rgba(205, 65, 65, 0) 100%);
+
+    --clr-item-category-background: rgba(191, 58, 58, 0.15);
+    --clr-item-category-hover: rgba(191, 58, 58, 0.35);
+    --clr-category-header: #cc40401f;
+ 
+    --clr-button-color: #ffffffc2;
+    --clr-button-background: #d738381f;
+
+    --clr-bottom-arrow: #d738381f;
+    --clr-bottom-arrow-hover: #d7383852;
+
+    --ff-special: 'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    font-size: 2vh;
+    color: var(--clr-white);
+    font-weight: 600;
+    font-family: var(--ff-special);
+    overflow: hidden;
+}
+
+.main__cardealer-container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-main-background);
+    overflow: hidden;
+}
+
+.main__cardealer-container-header {
+    width: 58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main__cardealer-container-small-header {
+    font-size: 2.4vh;
+    text-transform: uppercase;
+    color: #FFFFFF75;
+    font-weight: 500;
+}
+
+.main__cardealer-container-big-header {
+    font-size: 3.6vh;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    font-weight: 700;
+    margin-top: -1vh;
+}
+
+.main__cardealer-container-header-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main__cardealer-container-header-bg svg {
+    width: 35vh;
+}
+
+.main__cardealer-sphere-container {
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.main__cardealer-sphere-container svg {
+    width: 70vh;
+    z-index: -1;
+}
+
+.main__cardealer-flexbox {
+    position: absolute;
+    top: 50%;
+    left: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 33vh;
+    transform: perspective(100vh) rotateY(10deg) translateY(-50%);
+}
+
+.main__cardealer-flex-item {
+    position: relative;
+    width: 100%;
+    padding: 1.5vh;
+    background: var(--clr-item-background);
+    border: .1vh solid;
+    border-image-source: var(--clr-item-border);
+    border-image-slice: 1;
+}
+
+.main__cardealer-flex-item-header {
+    font-size: 2.4vh;
+    text-transform: uppercase;
+    color: var(--clr-secondary);
+    text-shadow: 0vh 0vh 1.7vh var(--clr-secondary);
+    margin-top: -.5vh;
+}
+
+.main__cardealer-flex-item-text {
+    font-size: 1.6vh;
+    text-transform: uppercase;
+    color: #FFFFFF80;
+    font-weight: 400;
+    margin-top: -.5vh;
+}
+
+.main__cardealer-color-grid {
+    margin-top: 1.5vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5vh;
+}
+
+.main__cardealer-color {
+    width: 100%;
+    height: 2.5vh;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.main__cardealer-color.blue {
+    background: #03A4FD;
+}
+
+.main__cardealer-color.yellow {
+    background: #f1ee37;
+}
+
+.main__cardealer-color.red {
+    background: #f13737;
+}
+
+.main__cardealer-color.green {
+    background: #29e752;
+}
+
+.main__cardealer-color.white {
+    background: #ffffff;
+}
+
+.main__cardealer-color.black {
+    background: #1d1d1d;
+}
+
+.main__cardealer-color:hover {
+    opacity: .5;
+}
+
+.main__cardealer-flex-item-drive-button,
+.main__cardealer-flex-item-buy-cancle-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    color: var(--clr-button-color);
+    background: var(--clr-button-background);
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    cursor: pointer;
+    transition: .2s ease-in;
+    margin-top: 1.5vh;
+}
+
+.main__cardealer-flex-item-buy-cancle-button {
+    margin-top: .5vh !important;
+}
+
+.main__cardealer-flex-item-drive-button:hover,
+.main__cardealer-flex-item-buy-cancle-button:hover {
+    background: var(--clr-secondary);
+    box-shadow: 0vh 0vh 1.7vh var(--clr-secondary);
+}
+
+.main__cardealer-flex-item-buy-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    color: var(--clr-button-color);
+    background: var(--clr-secondary);
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    cursor: pointer;
+    transition: .2s ease-in;
+    margin-top: 1.5vh;
+}
+
+.main__cardealer-flex-item-buy-button:hover {
+    box-shadow: 0vh 0vh 1.7vh var(--clr-secondary);
+}
+
+.main__cardealer-right-category-container {
+    position: absolute;
+    right: 5vh;
+    top: 50%;
+    width: 25vh;
+    transform: perspective(100vh) rotateY(-10deg) translateY(-50%);
+}
+
+.main__cardealer-right-category-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    font-size: 2.4vh;
+    text-transform: uppercase;
+    color: var(--clr-secondary);
+    text-shadow: 0vh 0vh 1.7vh var(--clr-secondary);
+    border-bottom: .2vh solid var(--clr-category-header);
+}
+
+.main__cardealer-right-category-scroll-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: .5vh;
+    overflow-y: scroll;
+    height: 39vh;
+    margin-top: 1vh;
+}
+
+.main__cardealer-right-category-scroll-container::-webkit-scrollbar {
+    width: 0vh;
+}
+
+.main__cardealer-right-category-scroll-item {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vh;
+    background: var(--clr-item-category-background);
+    border: .1vh solid;
+    border-image-source: var(--clr-item-border);
+    border-image-slice: 1;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    font-weight: 500;
+    text-shadow: 0vh 0vh 1.7vh var(--clr-primary);
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.main__cardealer-right-category-scroll-item:hover {
+    background: var(--clr-item-category-hover);
+}   
+
+.main__cardealer-bottom-container {
+    position: absolute;
+    width: 35vh;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main__cardealer-bottom-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: .25fr 1fr .25fr;
+    gap: 1vh;
+    align-items: center;
+}
+
+.main__cardealer-bottom-arrow {
+    width: 4.9vh;
+    height: 4.9vh;
+    background: var(--clr-bottom-arrow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.main__cardealer-bottom-arrow:hover {
+    background: var(--clr-bottom-arrow-hover);
+}
+
+.main__cardealer-bottom-arrow svg {
+    width: 100%;
+    transform: scale(2.0);
+}
+
+.main__cardealer-bottom-inforamtion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__cardealer-bottom-car-count {
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    font-weight: 600;
+}
+
+.main__cardealer-bottom-car-name {
+    font-size: 1.8vh;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    text-shadow: 0vh 0vh 1.7vh var(--clr-primary);
+    margin-top: 1vh;
+}
+
+.main__cardealer-bottom-car-price {
+    margin-top: -.5vh;
+    font-size: 3.6vh;
+    text-transform: uppercase;
+    color: var(--clr-green);
+    text-shadow: 0vh 0vh 1.7vh var(--clr-green);
+}
+
+.main__cardealer-bottom-sphere {
+    position: absolute;
+    bottom: -25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vh;
+    height: 30vh;
+    background: #09081B;
+    border-radius: 50%;
+    filter: blur(14vh);
+    z-index: -1;
+}
+
+.main__cardealer-corner-left,
+.main__cardealer-corner-right {
+    position: absolute;
+    top: .1vh;
+    left: .1vh;
+    width: .4vh;
+    height: .4vh;
+}
+
+.main__cardealer-corner-right {
+    right: .1vh;
+    left: unset;
+}
