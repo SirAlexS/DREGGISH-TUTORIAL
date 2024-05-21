@@ -19,3 +19,5 @@ Den Speicherort der entsprechenden Scripts wie auch den Link zum kauf, liste ich
 -- \server-data\resources\[MAPS]\Ocean_Medical_Center --> https://mxaizen-map.com
 -- \server-data\resources\[EXTRAS]\[5D]\5d-deathscreen --> https://store.5d-scripts.com
 -- \server-data\resources\[PHONE]\lb-phone --> https://store.lbphone.com/category/2238536
+-- \server-data\resources\[EXTRAS]\[HEX]\hex_2_garage --> https://hex-service.tebex.io/package/6034423
+-- \server-data\resources\[EXTRAS]\[HEX]\hex_2_vehicleshop --> https://hex-service.tebex.io/package/6033843
